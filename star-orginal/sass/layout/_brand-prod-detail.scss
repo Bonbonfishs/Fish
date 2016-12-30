@@ -1,0 +1,175 @@
+.product{
+	@extend %container-gutter;
+	background: $base-bgcolor-darken;
+	&-title{
+		@extend %content-width;
+		color: $base-title-fontcolor;
+		font-size: $base-fontsize-large;
+		font-weight: bold;
+		margin-top: 1rem;
+		@include breakpoint($tablet-width){
+			font-size: $base-fontsize-xlarge;
+			font-weight: normal;
+			margin-bottom: 1.5rem;
+		}
+	}
+}
+
+
+.product-guide{
+	@extend %content-width;
+	@extend %container-gutter;
+	@extend %clearfix;
+	padding-bottom: 50px;
+
+	&-slide{
+		@extend %clearfix;
+		margin-bottom: 30px;
+		@include breakpoint($tablet-width){
+			@include span(11 last);
+		}
+	}
+
+	&-slide-nav{
+		width: 17%;
+		display: block;
+		float: right;
+		@include box-sizing(border-box);
+		padding-left: 1%;
+
+		li{
+			background: $base-bgcolor-lighten;
+			margin-bottom:7%;
+			@include border-radius(5px);
+			border: $base-border-color-lighten 1px solid;
+		}
+
+		img{
+			display: block;
+		}
+	}
+
+	&-img{
+		width: 83%;
+		float: left;
+		text-align: center;
+		background: $base-bgcolor-lighten;
+		@include border-radius(5px);
+		border: $base-border-color-lighten 1px solid;
+		@include box-sizing(border-box);
+	}
+	
+	&-content{
+		@include breakpoint($tablet-width){
+			@include span(12);
+		}
+		@include breakpoint($desktop-width){
+			text-align: center;
+		}
+	}
+
+	&-title{
+		color: $base-title-fontcolor;
+		font-weight: bold;
+		margin-bottom: 1em;
+
+		@include breakpoint($tablet-width){
+			font-size: $base-fontsize-large;
+		}
+	}
+
+	&-text{
+		margin-bottom: 1.5em;
+		text-align: left;
+		@include breakpoint($desktop-width){
+			min-height: 280px;
+		}
+	}
+
+	&-buy-btn{
+		@include btn(inline-block,auto,small,redRadius);
+	}
+
+
+}
+
+
+.nutrition-fact{
+	@include module-subtitle(off,none);
+	@extend %container-gutter;
+	background: $base-bgcolor-lighten;
+
+	&-subtitle{
+		@extend %title-brand-nutrition-fact;
+	}
+
+	&-list{
+		@extend %clearfix;
+		@extend %content-width;
+	}
+
+	&-item{
+		width: 100%;
+		@include breakpoint($tablet-width){
+			@include span(11);
+			margin-bottom: 0;
+		}
+
+		caption{
+			padding: 15px 0;
+			color: $base-title-fontcolor;
+			font-size: $base-fontsize-large;
+			font-weight: bold;
+		}
+
+		th,td{
+			border-bottom: $base-border-color-lighten 1px solid;
+			padding: 15px 0;
+			width: 50%;
+			@include box-sizing(border-box);
+			@include breakpoint($desktop-width){
+				padding: 25px 10px;
+			}
+		}
+
+		th{
+			font-weight: bold;
+			padding-right: 10px;
+		}
+	}
+
+	&-item:nth-child(2n){
+		@include last;
+	}
+}
+
+
+.product-graphic{
+	//@extend %container-gutter;
+	padding-bottom: 50px;
+	background: $base-bgcolor-lighten;
+	&-subtitle{
+		@extend %content-width;
+		font-weight: bold;
+		padding: 0 10px 15px 0;
+		@include breakpoint($tablet-width){
+			display: none;
+		}
+	}
+
+	&-slider{
+		padding-left: 8%;
+		padding-left: 8vw;
+		margin: 0 auto;
+		@include box-sizing(border-box);
+		@include breakpoint($tablet-width){
+			padding: 0 80px; 
+			width: 90%;
+		}
+
+		@include breakpoint($desktop-width){
+			width: $desktop-width;
+		}
+	}
+}
+

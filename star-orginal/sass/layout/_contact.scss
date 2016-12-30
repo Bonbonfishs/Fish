@@ -1,0 +1,109 @@
+.contact{
+	
+	@extend %container-gutter;
+
+	&-book{
+		display: block;
+		@include container;
+		@extend %container-width;
+	}
+
+	&-item{
+		@include box-sizing(border-box);
+		position: relative;
+		margin-bottom: 10px;
+		padding: 15px;
+		background: $base-bgcolor-lighten;
+		font-size: $base-fontsize-small;
+
+		@include breakpoint($tablet-width){
+			font-size: $base-fontsize-mid;
+			margin-bottom: 60px;
+			padding: 0;
+			min-height: 170px;
+		}
+
+		dl{
+			display: block;
+		}
+
+		@include breakpoint($tablet-width){
+			@include span(11);
+		}
+	}
+
+	&-item:nth-child(even){
+		@include breakpoint($tablet-width){
+			@include last;
+		}
+	}
+
+	&-title{
+		margin: 0 0 8px 0;
+
+		h2{
+			font-size: $base-fontsize-mid;
+			font-weight: bold;
+
+			@include breakpoint($tablet-width){
+				width: 72%;
+				padding: 15px 0;
+				border-bottom: $base-border-color-darken 1px solid;
+				font-size: $base-fontsize-large;
+				font-weight: normal;
+			}
+		}	
+	}
+
+	&-tel, &-time, &-mail, &-address{
+		position: relative;
+		padding: 0 0 0 20px;
+
+		@include breakpoint($tablet-width){
+			padding: 5px 0 5px 25px;
+		}
+	}
+
+	&-tel:before, &-time:before, &-mail:before, &-address:before{
+		@include add-content(20px,20px);
+		@include background-size(contain);
+		top: 2px;
+		left: 0;
+		background: url(../imgs/icon/c01.jpg) no-repeat center;
+		
+		@include breakpoint($tablet-width){
+			top: 4px;
+			width: 25px;
+			height: 25px;
+		}
+	}
+
+	&-time{
+		time{
+			display: block;
+		}
+	}
+
+	&-qrcode{
+		position: absolute;
+		right: 10px;
+		top: 100%;
+		width: 80px;
+		margin: -90px 0 0 0;
+
+		@include breakpoint($tablet-width){
+			top: 10px;
+			right: 0;
+			width: 92px;
+			margin: 0;
+		}
+	}
+
+	&-qrcode ~ &-tel, &-qrcode ~ &-time, &-qrcode ~ &-mail, &-qrcode ~ &-address{
+		padding-right: 85px;
+		
+		@include breakpoint($tablet-width){
+			padding-right: 92px;
+		}
+	}
+}

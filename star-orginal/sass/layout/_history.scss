@@ -1,0 +1,201 @@
+.history{
+
+	@extend %container-gutter;
+
+	&-timeriver{
+		@extend %container-width;
+		display: block;
+	}
+
+	&-item{
+		display: block;
+		position: relative;
+		margin: 0 0 3vw 0;
+		padding: 3vw;
+		padding-left: 28vw;
+		background: $base-bgcolor-lighten;
+		
+		@include breakpoint($tablet-width){
+			padding: 0;
+		}
+	}
+
+	&-item:before{
+		@include add-content(4px,180%);
+		top: 0;
+		left: 20vw;
+		margin: 0 0 0 -2px;
+		background: $base-bgcolor-heightlight;
+		z-index: 5;
+
+		@include breakpoint($tablet-width){
+			left: 50%;
+		}
+	}
+
+	&-item:first-child:before{
+		top: 50%;
+
+		@include breakpoint($tablet-width){
+			top: 0;
+		}
+	}
+
+	&-item:nth-child(24):before{
+		top: -80%;
+
+	}
+
+	&-item:last-child:before{
+		top: -130%;
+		@include breakpoint($tablet-width){
+			top: -180%;
+		}
+	}
+
+	&-item:after{
+		@extend %clearfix-both;
+	}
+
+	&-item:nth-child(odd){
+		.history-textbox{
+			@include breakpoint($tablet-width){
+				float: left;
+				text-align: right;
+			}
+		}
+
+		.history-logo-img{
+			@include breakpoint($tablet-width){
+				float: right;
+			}
+		}
+
+		.history-time{
+			@include breakpoint($tablet-width){
+				text-align: right;
+			}
+		}
+		
+	}
+
+	&-item:nth-child(even){
+		.history-textbox{
+			@include breakpoint($tablet-width){
+				float: right;
+			}
+		}
+
+		.history-logo-img{
+			@include breakpoint($tablet-width){
+				float: left;
+				text-align: right;
+			}
+		}
+
+		.history-time{
+			@include breakpoint($tablet-width){
+				text-align: left;
+			}
+		}
+		
+	}
+
+	
+
+	&-textbox{
+		i{
+			color: $base-bgcolor-heightlight;
+			font-style: italic;
+		}
+
+		@include breakpoint($tablet-width){
+			width: 47%;
+		}
+	}
+
+	&-textbox:after{
+		@include add-content(12px,12px);
+		@include border-radius(50%);
+		top: 50%;
+		left: 20vw;
+		margin: -9px 0 0 -9px;
+		border: $base-border-color-bright 3px solid; // 顏色確認
+		background: $base-bgcolor-heightlight;
+		z-index: 10;
+
+		@include breakpoint($tablet-width){
+			left: 50%;
+			top: 0;
+			background : $base-bgcolor-lighten;
+			border-color: $base-border-color-heightlight; // 顏色確認
+		}
+	}
+
+	&-logo-img ~ &-textbox{
+		padding-right: 80px;
+		min-height: 80px;
+
+		@include breakpoint($tablet-width){
+			padding: 0;
+		}
+	}
+
+	&-logo-img{
+		position: absolute;
+		width: 70px;
+		right: 3vw;
+		top: 3vw;
+
+		> img{
+			max-width: 100%;
+		}
+
+		@include breakpoint($tablet-width){
+			position: relative;
+			width: 47%;
+			top: -38px;
+			right: 0;
+		}
+	}
+
+	&-infolist{
+		@include inline-block;
+		padding-left: 2vw;
+		list-style: disc;
+
+		@include breakpoint($tablet-width){
+			position: relative;
+			top: -38px;
+		}
+
+		li{
+			text-align: left;
+		}
+	}
+
+	&-time{
+		position: absolute;
+		top: 50%;
+		left: 0; 
+		display: block;
+		width: 20vw;
+		color: $base-fontcolor-highlight;
+		font-size: 5vw;
+		line-height: 6vw;
+		margin: -3vw 0 0 0;
+		padding: 0 4px 0 0;
+		text-align: center;
+		@include breakpoint($tablet-width){
+			position: relative;
+			font-size: 50px;
+			line-height: 1.5em;
+			width: 100%;
+			margin: 0;
+			padding: 0;
+			top: -38px;
+		}
+	}
+
+
+}

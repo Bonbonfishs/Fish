@@ -1,0 +1,60 @@
+//清除浮動
+
+%clearfix{
+	zoom:1;
+	overflow:hidden;
+}
+
+%clearfix-both{
+	&:after{
+		display: table;
+		content: "";
+ 		line-height: 0;
+		clear: both;
+	}
+}
+
+// 輔助 maxin add-content
+
+%add-content{
+	content:" ";
+	position: absolute;
+	display: block;
+	zoom:1;
+	overflow:hidden;
+}
+
+// 將字推出
+
+%text-hidden{
+	white-space: nowrap;
+	text-indent: 110%;
+	overflow: hidden;
+}
+
+
+%text-overflow{
+	text-overflow: ellipsis;
+	white-space : nowrap;
+	overflow: hidden;
+}
+
+
+// media query hidden
+
+.mobile-hidden{
+	display: none;
+	@include breakpoint($tablet-width){
+		@include inline-block; 
+	}
+}
+
+.tablet-hidden{
+	display: none;
+	@include breakpoint($desktop-width){
+		@include inline-block;
+	}
+}
+
+
+

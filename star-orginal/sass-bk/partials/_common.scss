@@ -1,0 +1,290 @@
+// font size
+.font-size-0{font-size: 0;}
+.font-size-12{font-size: $base-font-size*0.923;}
+.font-size-13{font-size: $base-font-size;}
+.font-size-15{font-size: $base-font-size*1.154;}
+.font-size-16{font-size: $base-font-size*1.231;}
+//.font-size-17{font-size: $base-font-size*1.308;}
+.font-size-18{font-size: $base-font-size*1.385;}
+.font-size-20{font-size: $base-font-size*1.538;}
+.font-size-24{font-size: $base-font-size*1.846;}
+.font-size-26{font-size: $base-font-size*2;}
+.font-size-28{font-size: $base-font-size*2.154;}
+//.font-size-35{font-size: $base-font-size*2.769;}
+.font-size-36{font-size: $base-font-size*2.769;}
+
+// line height
+.line-height-13{line-height: $base-line-height*0.542;}
+.line-height-16{line-height: $base-line-height*0.667;}
+.line-height-18{line-height: $base-line-height*0.75;}
+.line-height-20{line-height: $base-line-height*0.833;}
+//.line-height-22{line-height: $base-line-height*0.917;}
+.line-height-24{line-height: $base-line-height;}
+//.line-height-28{line-height: $base-line-height*1.167;}
+.line-height-30{line-height: $base-line-height*1.25;}
+//.line-height-31{line-height: $base-line-height*1.333;}
+//.line-height-33{line-height: $base-line-height*1.385;}
+//.line-height-35{line-height: $base-line-height*1.458;}
+.line-height-36{line-height: $base-line-height*1.5;}
+.line-height-48{line-height: $base-line-height*2;}
+.line-height-54{line-height: $base-line-height*2.25;}
+
+// font color
+.fontcolor-black{color: $base-fontcolor-black;}
+.fontcolor-gray{color: $base-fontcolor-gray;}
+.fontcolor-lightgray{color: $base-fontcolor-lightgray;}
+.fontcolor-deepgray{color: $base-fontcolor-deepgray;}
+.fontcolor-white{color: $base-fontcolor-white;}
+.fontcolor-sec-highlight{color: $base-fontcolor-sec-highlight;}
+.fontcolor-highlight{color: $base-fontcolor-highlight;}
+
+// font setting
+
+.font-weight-bold{font-weight: bold;}
+.font-weight-normal{font-weight: normal;}
+.font-style-normal{font-style: normal;}
+.text-decoration-underline{text-decoration: underline;}
+.text-decoration-line-through{text-decoration: line-through;}
+.text-decoration-none{text-decoration: none;}
+.text-transform-uppercase{text-transform: uppercase;}
+.text-center{text-align: center;}
+
+// bg color
+.bgcolor-black{background: $base-bgcolor-black;}
+.bgcolor-white{background: $base-bgcolor-white;}
+.bgcolor-gray{background: $base-bgcolor-gray;}
+.bgcolor-deepgray{background: $base-bgcolor-deepgray;}
+.bgcolor-darkgray{background: $base-bgcolor-darkgray;}
+.bgcolor-sec-highlight{background: $base-bgcolor-sec-highlight;}
+.bgcolor-highlight{background: $base-bgcolor-highlight;}
+
+// border color
+.border-color{border-color: $border-color;}
+.border-black{border-color: $border-black;}
+.border-gray{border-color: $border-gray;}
+.input-border-color{border-color: $input-border-color;}
+.border-highlight{border-color: $border-highlight;}
+.border-prod{border-color: $border-prod;}
+
+// border width
+
+.border-0{border-width: 0;}
+.border-1{border-width: 1px;}
+.border-top-1{border-width: 1px 0 0 0;}
+.border-top-3{border-width: 3px 0 0 0;}
+.border-bottom-1{border-width: 0 0 1px 0;}
+.border-right-1{border-width: 0 1px 0 0;}
+.border-left-1{border-width: 0 0 0 1px;}
+.border-style-solid{border-style: solid;}
+.border-style-dashed{border-style: dashed;}
+.border-style-dotted{border-style: dotted;}
+
+// category color
+
+.category-fontcolor-0-1{color: nth($category-color-0,1);}
+.category-fontcolor-0-2{color: nth($category-color-0,2);}
+.category-fontcolor-0-3{color: nth($category-color-0,3);}
+.category-fontcolor-1-1{color: nth($category-color-1,1);}
+.category-fontcolor-1-2{color: nth($category-color-1,2);}
+.category-fontcolor-1-3{color: nth($category-color-1,3);}
+.category-fontcolor-2-1{color: nth($category-color-2,1);}
+.category-fontcolor-2-2{color: nth($category-color-2,2);}
+.category-fontcolor-2-3{color: nth($category-color-2,3);}
+.category-fontcolor-3-1{color: nth($category-color-3,1);}
+.category-fontcolor-3-2{color: nth($category-color-3,2);}
+.category-fontcolor-3-3{color: nth($category-color-3,3);}
+.category-fontcolor-4-1{color: nth($category-color-4,1);}
+.category-fontcolor-4-2{color: nth($category-color-4,2);}
+.category-fontcolor-4-3{color: nth($category-color-4,3);}
+.category-fontcolor-5-1{color: nth($category-color-5,1);}
+.category-fontcolor-5-2{color: nth($category-color-5,2);}
+.category-fontcolor-5-3{color: nth($category-color-5,3);}
+.category-fontcolor-6-1{color: nth($category-color-6,1);}
+.category-fontcolor-6-2{color: nth($category-color-6,2);}
+.category-fontcolor-6-3{color: nth($category-color-6,3);}
+.category-fontcolor-7-1{color: nth($category-color-7,1);}
+.category-fontcolor-7-2{color: nth($category-color-7,2);}
+.category-fontcolor-7-3{color: nth($category-color-7,3);}
+.category-fontcolor-8-1{color: nth($category-color-8,1);}
+.category-fontcolor-8-2{color: nth($category-color-8,2);}
+.category-fontcolor-8-3{color: nth($category-color-8,3);}
+
+.category-bgcolor-0-1{background: nth($category-color-0,1);}
+.category-bgcolor-0-2{background: nth($category-color-0,2);}
+.category-bgcolor-0-3{background: nth($category-color-0,3);}
+.category-bgcolor-1-1{background: nth($category-color-1,1);}
+.category-bgcolor-1-2{background: nth($category-color-1,2);}
+.category-bgcolor-1-3{background: nth($category-color-1,3);}
+.category-bgcolor-2-1{background: nth($category-color-2,1);}
+.category-bgcolor-2-2{background: nth($category-color-2,2);}
+.category-bgcolor-2-3{background: nth($category-color-2,3);}
+.category-bgcolor-3-1{background: nth($category-color-3,1);}
+.category-bgcolor-3-2{background: nth($category-color-3,2);}
+.category-bgcolor-3-3{background: nth($category-color-3,3);}
+.category-bgcolor-4-1{background: nth($category-color-4,1);}
+.category-bgcolor-4-2{background: nth($category-color-4,2);}
+.category-bgcolor-4-3{background: nth($category-color-4,3);}
+.category-bgcolor-5-1{background: nth($category-color-5,1);}
+.category-bgcolor-5-2{background: nth($category-color-5,2);}
+.category-bgcolor-5-3{background: nth($category-color-5,3);}
+.category-bgcolor-6-1{background: nth($category-color-6,1);}
+.category-bgcolor-6-2{background: nth($category-color-6,2);}
+.category-bgcolor-6-3{background: nth($category-color-6,3);}
+.category-bgcolor-7-1{background: nth($category-color-7,1);}
+.category-bgcolor-7-2{background: nth($category-color-7,2);}
+.category-bgcolor-7-3{background: nth($category-color-7,3);}
+.category-bgcolor-8-1{background: nth($category-color-8,1);}
+.category-bgcolor-8-2{background: nth($category-color-8,2);}
+.category-bgcolor-8-3{background: nth($category-color-8,3);}
+
+
+.category-bgcolor-1{background: nth($category-color-0,1);}
+
+
+// elements width
+.width-mt{width: 20px;}
+.width-mn{width: 50px;}
+.width-xs{width: 80px;}
+.width-sm{width: 130px;}
+.width-md{width: 200px;}
+.width-lg{width: 300px;}
+.width-xl{width: 400px;}
+
+// elements border-radius
+.border-radius-none{@include border-radius(0);}
+.border-radius-xs{@include border-radius(3px);}
+.border-radius-sm{@include border-radius(5px);}
+.border-radius-md{@include border-radius(13px);}
+.border-radius-half{@include border-radius(50%);}
+
+// elements input padding
+.padding-xs{padding: 0 6px;}
+.padding-sm{padding: 2px 6px;}
+.padding-md{padding: 6px 12px;}
+.padding-lg{padding: 12px;}
+.padding-xl{padding: 12px 18px;}
+
+.btn-animate{
+	@include transform(translate(0, 0));
+	@include links-hover(){
+		@include transform(translate(0, -2px));
+	}
+}
+
+.price-font{font-family: "ArialNarrow";}
+
+// form elements style
+
+// none style
+.input-style-nn{
+	border: none;
+	@extend .fontcolor-gray;
+}
+
+// link & button elements style
+
+// 紅底白字
+.link-style-wr{
+	@extend .fontcolor-white;
+	background: $base-bgcolor-highlight;
+	border:$border-highlight 1px solid;
+	@include links-hover(){
+		@include btn-hover-effect($base-bgcolor-highlight);
+	};
+}
+// 白底紅字
+.link-style-rw{
+	color: $base-fontcolor-highlight;
+	background: $base-bgcolor-white;
+	border:$border-highlight 1px solid;
+	@include links-hover(){
+		color: $base-fontcolor-white;
+		background: $base-bgcolor-highlight;
+	};
+}
+// 白底黑字
+.link-style-bw{
+	color: $base-fontcolor-black;
+	background: $base-bgcolor-white;
+	border:$input-border-color 1px solid;
+	@include links-hover(){
+		background: $base-bgcolor-gray;
+	};
+}
+
+// 白底灰字
+.link-style-gw{
+	color: $base-fontcolor-gray;
+	background: $base-bgcolor-white;
+	border:$border-color 1px solid;
+}
+
+// 灰底灰字
+.link-style-gg{
+	@extend .fontcolor-gray;
+	@extend .bgcolor-gray;
+	@extend .border-gray;
+	@extend .border-1;
+	@extend .border-style-solid;
+}
+
+// 但灰字
+
+.link-style-lg{
+	@extend .fontcolor-lightgray;
+	background: none;
+	@include links-hover{
+		color: $base-fontcolor-lightgray;
+		@extend .text-decoration-none;
+	}
+}
+
+// 灰底白字
+.link-style-wg{
+	color: $base-fontcolor-white;
+	background: $base-bgcolor-darkgray;
+	@include links-hover{
+		background: $base-bgcolor-deepgray;
+	}
+}
+
+// underline link
+.link-style-ul-gray{
+	border: none;
+	color: $base-fontcolor-gray;
+	text-decoration: underline;
+
+	@include links-hover{
+		text-decoration: none;
+	}
+}
+
+// underline link
+
+.link-style-ul-red{
+	border: none;
+	color: $base-fontcolor-highlight;
+	@include links-hover{
+		color:darken($base-fontcolor-highlight,5);
+		background: none;
+	}
+}
+
+.link-underline{
+	@include links{
+		text-decoration: underline;
+	}
+	@include links-hover{
+		text-decoration: none;
+	}
+}
+
+.link-hover-underline{
+	@include links{
+		text-decoration: none;
+	}
+	@include links-hover{
+		text-decoration: underline;
+	}
+}
+

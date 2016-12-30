@@ -1,0 +1,71 @@
+@import "compass";
+@import "compass/reset";
+@import "compass/css3";  
+@import "susy"; 
+@import "breakpoint"; 
+
+@import "base/variables";
+@import "base/grid-setting";
+@import "base/base-style-setting";
+
+@import "generic/extend"; 
+@import "generic/maxin"; 
+@import "generic/common"; 
+
+@import "modules/module-button";
+@import "modules/module-subtitle";  
+@import "modules/module-recipe-list";
+@import "modules/module-search-bar";
+@import "modules/module-topic-info";
+@import "modules/module-prod-list";
+@import "modules/module-news-list"; 
+
+@import "partials/pre-loader"; 
+@import "partials/header";
+@import "partials/footer";
+@import "partials/breadcrumb";
+@import "partials/key-visual";
+@import "partials/go-top";
+@import "partials/topics-recommend";
+
+@import "layout/history"; 
+@import "layout/contact";
+@import "layout/brand-attitude";
+@import "layout/brand-topic"; 
+@import "layout/brand-recipe-list"; 
+@import "layout/brand-recipe-detail";
+@import "layout/brand-prod-list";
+@import "layout/brand-prod-detail";
+@import "layout/brand-index";
+@import "layout/brand-news-list"; 
+@import "layout/brand-group";
+
+@import "vendor/fontello";  
+@import "vendor/fontello-ie7";                
+
+.container{ 
+	background: $mobile-bgcolor;
+	@include breakpoint($tablet-width){
+		background: $deskop-bgcolor;
+	}
+}
+
+body.screen-mask{
+	&:before{
+		@include add-content(100%,100%);
+		position: fixed;
+		top: 0;
+		left: 0;
+		z-index: 1;
+		background: rgba(#000,.8);
+		@include breakpoint($desktop-width){
+			display: none;
+		}
+	}
+}
+
+.status-hide{
+	display: none;
+}
+
+

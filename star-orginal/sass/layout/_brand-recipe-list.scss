@@ -1,0 +1,31 @@
+.recipelist{
+	@include module-subtitle(on,titleLarge);
+	@include recipelist;
+	@extend %container-gutter;
+	background: $base-bgcolor-darken;
+	text-align: center; 
+
+	&-header{
+		margin-bottom: 4rem;
+	}
+
+	&-search{
+		@include search;
+	}
+
+	&-subtitle{
+		@extend %title-brand-all-recipes;
+	}
+
+	&-totalnum{
+		@extend %module-subtitle-totalnum;
+	}
+
+	&-search ~ &-totalnum{
+		top: 65px;
+	}
+
+	&-more-btn{
+		@include btn;
+	}
+}

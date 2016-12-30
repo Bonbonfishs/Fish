@@ -1,0 +1,88 @@
+// header about subtitle
+
+%module-subtitle-header{
+	@extend %content-width;
+	@extend %clearfix-both;
+	margin-top: 1rem;
+	margin-bottom: 1.5rem; 
+	@include breakpoint($desktop-width){
+		margin-bottom: 2.5rem; 
+	}
+}
+
+
+// subtitle
+
+%module-subtitle-title{
+	@extend %text-hidden;
+	min-height: 32px;
+	line-height: 1em;
+	text-align: left;
+	background-repeat: no-repeat;
+}
+
+%subtitle-subtitle-aside{
+	@include span(16);
+	@include last;
+	position: relative;
+	text-align: right;
+}
+
+// totalnum
+
+%module-subtitle-totalnum{
+	font-size: $base-fontsize-small;
+	position: absolute;
+	top: 12px;
+	right:5px;
+	b{
+		padding: 0 3px; 
+		font-weight: bold;
+	}
+}
+
+
+@mixin module-subtitle($aside,$status){
+	&-header{
+		@extend %module-subtitle-header;
+	}
+
+	&-subtitle{
+		@extend %module-subtitle-title;
+	}
+
+	@if $aside == on{
+		&-subtitle{
+			@include span(8);
+		}
+
+		&-subtitle-aside{
+			@extend %subtitle-subtitle-aside;
+		}
+	}
+
+	@if $status == titleLarge{
+		&-subtitle{
+
+			@include breakpoint($desktop-width){
+				min-height: 40px;
+			}
+		}
+	}
+
+	@if $status == titleText{
+		&-subtitle{
+			color: $base-title-fontcolor;
+			font-size: $base-fontsize-large;
+			font-weight: bold;
+			text-indent: 0;
+
+			@include breakpoint($desktop-width){
+				font-size: $base-fontsize-xlarge;
+				font-weight: normal;
+				line-height: 1.5em;
+			}
+		}	
+	}
+}
+

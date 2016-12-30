@@ -1,0 +1,729 @@
+/*
+.menu{
+	@extend %common-container-width;
+	@include animate(all,0.1s,ease);
+	height: 55px;
+	@include scrolling(){
+		height: 0;
+		padding: 0;
+		overflow: hidden;
+		@include opacity(0);
+	}
+
+	@include concise(){
+		display: none;
+	}
+
+	@include simplify(){
+		display: none;
+	}
+	
+	.menu-list{
+		display: block;
+		height: 55px;
+		position: relative;
+		padding: 1px 0 0 0;
+		.menu-item{
+			@include inline-block;
+			>a{
+				position: relative;
+				@include inline-block;
+				padding: 0 20px;
+				@extend .font-size-15;
+				@extend .line-height-54;
+				@extend .fontcolor-black;
+				cursor: pointer;
+				&:before,&::before{
+					@include add-content(0%,2px);
+					@extend .bgcolor-highlight;
+					left: 0;
+					bottom: 0;
+					@include animate(all,0.3s,ease);
+					@include transform(scaleX(0));
+					@include transform-origin(left 100%);
+				}
+				@include links-hover(){
+					@extend .fontcolor-highlight;
+					&:before,&::before{
+						width: 100%;
+						@include transform(scaleX(1));
+					}
+					border-bottom:$border-highlight 2px solid\9;
+				}
+			}
+		}
+		>dt{
+			position: absolute;
+			right: 0;
+			top: 0;
+			@include inline-block;
+			overflow: hidden;
+			width: 165px;
+			height: 55px;
+		}
+	}
+}*/
+
+// 商品選單
+
+.prod-menu{
+	position: absolute;
+	left: 20px;
+	z-index: 5;
+	width: 94px;
+	text-align: left;
+	@include concise{
+		display: none;
+	}
+}
+
+.prod-menu-tab{
+	display: block;
+	@extend .bgcolor-highlight;
+	@extend .fontcolor-white;
+	@extend .border-radius-md;
+	width: 25px;
+	max-height: 25px;
+	margin-bottom: 10px;
+	
+	text-align: center;
+	@include breaks{
+		width: 85px;
+		padding: 0 3px 0 2px;
+		i{
+			margin:0 6px 0 0;
+		}
+	}
+}
+
+.prod-menu-tabname{
+	display: none;
+	@include breaks{
+		@include inline-block;
+	}
+}
+
+// 次選單
+
+.sub-menu{
+	display: none;
+	position: absolute;
+	left: 0;
+	top: 100%;
+	width: 100%;
+	z-index: 50;
+	@extend .bgcolor-white;
+	@extend .border-color;
+	@extend .border-style-solid;
+	@extend .border-1;
+	@include box-shadow(rgba(darken($border-color,50),0.2) 2px 2px 5px);
+	@extend %clearfix;
+}
+
+.sub-menu-cates{
+	@include span(18);
+}
+
+.sub-menu-aside{
+	@extend .border-color;
+	@extend .border-style-solid;
+	@extend .border-left-1;
+	@include span(6);
+	padding: 30px 0;
+	section{
+		width: 220px;
+		margin: 0 auto;
+	}
+}
+
+.sub-menu-cates-list{
+	display: block;
+	padding: 30px 0 30px 35px;
+	@extend %clearfix;
+}
+
+.sub-menu-cates-columns{
+	@include span(6);
+}
+
+.sub-menu-cates-title, .sub-menu-brands-title{
+	margin: 0 0 10px 0;
+	@extend .font-size-13;
+	@extend .line-height-24;
+	@extend .fontcolor-black;
+	@extend .font-weight-normal;
+	a{
+		@include links{
+			@extend .fontcolor-black;
+		}
+		@include links-hover{
+			@extend .fontcolor-highlight;
+		}
+	}
+}
+
+.sub-menu-cates-detail{
+	display: block;
+	padding: 0 30px 0 0;
+}
+
+.sub-menu-cates-item{
+	display: block;
+	a{
+		@include links-hover{
+			@extend .text-decoration-underline;
+		}
+	}
+}
+
+.sub-menu-brands{
+	@extend .border-color;
+	@extend .border-style-solid;
+	@extend .border-top-1;
+	padding: 30px 0 25px 35px;
+}
+
+.sub-menu-brands-list{
+	display: block;
+	li{
+		@include inline-block;
+		a{
+			display: block;
+			padding: 0 5px;
+		}
+	}
+}
+
+// 會員選單
+
+%panels{
+	position: absolute;
+	top: 36px;
+	left: 50%;
+	display: block;
+	@extend .border-radius-md;
+	@extend .bgcolor-white;
+	@extend .border-1;
+	@extend .border-style-solid;
+	border-color: #efefef;
+	padding: 5px 16px;
+	min-height: 100px;
+	text-align: center;
+	@include box-shadow(0 3px 0 #e1e1e1);
+	display: none;
+}
+
+%panel-item{
+	display: block;
+	@extend .border-style-dotted;
+	@extend .border-top-1;
+	@extend .border-gray;
+	@extend .fontcolor-black;
+	&:first-child{
+		border: none;
+	}
+
+	a{
+		display: block;
+		@include links{
+			padding: 5px 0;
+			@extend .fontcolor-black;
+		}
+
+		@include links-hover{
+			@extend .fontcolor-highlight;
+		}
+	}
+}
+
+%panel-btn{
+	display: block;
+	@extend .link-style-wr;
+	width:100%;
+	padding: 0 5px;
+	@extend .border-radius-md;
+	margin: 2px 0 6px 0;
+	position: relative;
+	left: -5px;
+	border: none;
+	outline: none;
+	@extend .line-height-24;
+	@include box-sizing(content-box);
+}
+
+.profile-menu{
+	position: absolute;
+	right: 15px;
+	z-index: 5;
+	width: 60%;
+	text-align: right;
+
+	&[data-status="login"]{
+		.status-login{
+			display: block;
+		}
+	}
+
+	&[data-status="logout"]{
+		.status-logout{
+			display: block;
+		}
+	}
+}
+
+.status-login, .status-logout{
+	display: none;
+	position: relative;
+}
+
+.profile-tabs{
+	display: block;
+	text-align: right;
+	>li{
+		@include inline-block;
+		vertical-align: top;
+		margin-left: 5px;
+	}
+}
+
+%tabs{
+	position: relative;
+	@include inline-block;
+	@extend .border-radius-md;
+	max-height: 26px;
+	min-width: 26px;
+	text-align: center;
+	vertical-align: top;
+	i{
+		@extend .fontcolor-white;
+	}
+	@include transform(translate(0, 0));
+}
+
+.profile-notify, .profile-message, .profile-bonus, .profile-member{
+	position: relative;
+	padding-bottom: 10px;
+	@include animate(all,0.3s,ease);
+	.profile-menu[data-status="login"] &{
+		&:hover, &.active{
+			@include transform(translate(0, -4px));
+			&:before{
+				@extend %arrow;
+				@extend .border-style-solid;
+				border-width: 6px;
+				border-color: transparent transparent $base-bgcolor transparent;
+				top: 15px;
+				left: 50%;
+				margin-left: -6px;
+				z-index: 15;
+			}
+		}
+	}
+
+	.profile-menu[data-status="logout"] &{
+		@extend .font-size-0;
+		white-space : nowrap;
+		&-tab{
+			&:before{
+				display: none;
+			}
+		}
+
+		&-notice{
+			@include inline-block;
+			@extend .fontcolor-black;
+			@extend .font-size-13;
+			width: 0;
+			overflow: hidden;
+			white-space : nowrap;
+			@include box-sizing(border-box);
+			@include animate(all,0.3s,ease);
+		}
+
+		&-box{
+			@extend .border-radius-md;
+			@extend .font-size-13;
+			overflow: hidden;
+			background: lighten($maincolor-orange,5);
+			@include animate(all,0.3s,ease);
+			width: 26px;
+			height: 26px;
+		}
+	}
+}
+.profile-member{
+	&-panel{
+		@include arrow(up);
+		@extend %panels;
+		width: 86px;
+		margin-left: -43px;
+	}
+
+	&-tab{
+		@extend %tabs;
+		@extend .font-size-13;
+		padding: 3px 10px 3px 3px;
+		background: $maincolor-pink;
+	}
+
+	.profile-menu[data-status="logout"] & &-tab{
+		padding: 0 10px;
+		@extend .fontcolor-black;
+
+		a{
+			@include inline-block;
+			@extend .link-hover-underline;
+			@include links{
+				@extend .fontcolor-black;
+			}
+		}
+
+	}
+
+	&-img{
+		@include inline-block;
+		width: 20px;
+		height: 20px;
+		margin-right: 3px;
+		@extend .border-radius-half;
+		overflow: hidden;
+		vertical-align: top;
+		img{
+			@extend .border-radius-half;
+			max-width: 100%;
+		}
+	}
+
+	&-name{
+		@include inline-block;
+		@extend .fontcolor-black;
+		@extend .line-height-20;
+		vertical-align: top;
+	}
+
+	&-list{
+		display: block;
+	}
+
+	&-item{
+		@extend %panel-item;
+	}
+
+	&-btn{
+		@extend %panel-btn;
+	}
+}
+
+.profile-bonus{
+	&-panel{
+		@include arrow(up);
+		@extend %panels;
+		width: 160px;
+		margin-left: -80px;
+	}
+
+	.profile-menu[data-status="logout"] &:hover,.profile-menu[data-status="logout"] &.active{
+		.profile-bonus-box{
+			width: auto;
+		}
+
+		.profile-bonus-notice{
+			width: auto;
+			padding: 0 10px 0 0;
+		}
+	}
+
+	&-tab{
+		.profile-bonus[data-status="login"] &{
+			padding: 0 12px 0 7px;
+		}
+		@extend %tabs;
+		background: $maincolor-orange;
+		
+		span{
+			position: relative;
+			@include inline-block;
+			@extend .fontcolor-black;
+			padding: 0 5px;
+
+			&:before{
+				position: absolute;
+				top: -15px;
+				left: 0;
+				padding: 2px 5px 0 5px;
+				content: attr(data-tag);
+				min-width: 20px;
+				@include inline-block;
+				@extend .font-size-12;
+				@extend .line-height-20;
+				@extend .border-radius-md;
+				@extend .bgcolor-highlight;
+				@extend .text-transform-uppercase;
+				@extend .fontcolor-white;
+				@include scale(0.7);
+			}
+		}
+	}
+
+	&-list{
+		display: block;
+		@extend .font-size-0;
+	}
+
+	&-item{
+		@include inline-block;
+		width: 49%;
+		margin: 15px 0 8px 0;
+		@extend .border-right-1;
+		@extend .border-style-dotted;
+		@extend .border-gray;
+		&:first-child{
+			padding: 0 8px 0 0;
+		}
+		&:last-child{
+			border: none;
+			padding: 0 0 0 8px;
+		}
+
+		i{
+			@extend .font-size-28;
+		}
+	}
+
+	&-name{
+		display: block;
+		@extend .font-size-12;
+		@extend .line-height-20;
+		@extend .fontcolor-black;
+		em{
+			display: block;
+			@extend .font-style-normal;
+			@extend .font-size-20;
+			@extend .line-height-30;
+			@extend .fontcolor-highlight;
+		}
+	}
+
+	&-btn{
+		@extend %panel-btn;
+	}
+}
+
+.profile-message{
+	&-panel{
+		@include arrow(up);
+		@extend %panels;
+		width: 280px;
+		margin-left: -140px;
+	}
+
+	.profile-menu[data-status="logout"] &:hover,.profile-menu[data-status="logout"] &.active{
+		.profile-message-box{
+			width: auto;
+		}
+
+		.profile-message-notice{
+			width: auto;
+			padding: 0 10px 0 0;
+		}
+	}
+
+	&-tab{
+		position: relative;
+		@extend %tabs;
+		max-width: 26px;
+		background: $maincolor-orange;
+		&:before{
+			position: absolute;
+			top: -14px;
+			right: -6px;
+			min-width: 20px;
+			padding: 2px 5px 0 5px;
+			content: attr(data-tag);
+			@include inline-block;
+			@extend .font-size-12;
+			@extend .line-height-20;
+			@extend .border-radius-md;
+			@extend .bgcolor-highlight;
+			@extend .text-transform-uppercase;
+			@extend .fontcolor-white;
+			@include scale(0.7);
+		}
+	}
+	&-item{
+		@extend %panel-item;
+		text-align: left;
+		padding: 8px 0;
+		a{
+			display: inline;
+			@include links{
+				padding: 0;
+			}
+			
+		}
+	}
+
+	&-memberhead{
+		@include inline-block;
+		width: 40px;
+		height: 40px;
+		@extend .border-radius-half;
+		overflow: hidden;
+		margin-right: 6px;
+		img{
+			@extend .border-radius-half;
+		}
+		a{
+			@include inline-block;
+		}
+	}
+
+	&-text{
+		@include inline-block;
+		width: 100%;
+		@extend .line-height-20;
+	}
+
+	&-memberhead ~ &-text{
+		width: 195px;
+	}
+
+	&-btn{
+		@extend %panel-btn;
+	}
+
+	&-name{
+		display: inline;
+		@extend .link-hover-underline;
+		a{
+			display: inline;
+			@include links-hover{
+				color: $base-fontcolor-black;
+			}
+		}
+	}
+
+	&-mess{
+		display: inline;
+		a{
+			display: inline;
+			@include links{
+				color: $base-fontcolor-gray;
+			}
+			@include links-hover{
+				color: $base-fontcolor-gray;
+			}
+		}
+	}
+}
+
+.profile-notify{
+	&-panel{
+		@include arrow(up);
+		@extend %panels;
+		width: 280px;
+		margin-left: -140px;
+	}
+
+	.profile-menu[data-status="logout"] &:hover,.profile-menu[data-status="logout"] &.active{
+		.profile-notify-box{
+			width: auto;
+		}
+
+		.profile-notify-notice{
+			width: auto;
+			padding: 0 10px 0 0;
+		}
+	}
+
+	&-tab{
+		position: relative;
+		@extend %tabs;
+		max-width: 26px;
+		background: $maincolor-orange;
+		&:before{
+			position: absolute;
+			top: -14px;
+			right: -6px;
+			min-width: 20px;
+			padding: 2px 5px 0 5px;
+			content: attr(data-tag);
+			@include inline-block;
+			@extend .font-size-12;
+			@extend .line-height-20;
+			@extend .border-radius-md;
+			@extend .bgcolor-highlight;
+			@extend .text-transform-uppercase;
+			@extend .fontcolor-white;
+			@include scale(0.7);
+		}
+	}
+	&-item{
+		@extend %panel-item;
+		text-align: left;
+		padding: 8px 0;
+		a{
+			display: inline;
+			@include links{
+				padding: 0;
+			}
+			
+		}
+	}
+
+	&-memberhead{
+		@include inline-block;
+		width: 40px;
+		height: 40px;
+		@extend .border-radius-half;
+		overflow: hidden;
+		margin-right: 6px;
+		img{
+			@extend .border-radius-half;
+		}
+		a{
+			@include inline-block;
+		}
+	}
+
+	&-text{
+		@include inline-block;
+		width: 100%;
+		@extend .line-height-20;
+	}
+
+	&-memberhead ~ &-text{
+		width: 195px;
+	}
+
+	&-btn{
+		@extend %panel-btn;
+	}
+
+	&-name{
+		display: inline;
+		@extend .link-hover-underline;
+		a{
+			display: inline;
+			@include links-hover{
+				color: $base-fontcolor-black;
+			}
+		}
+	}
+
+	&-mess{
+		display: inline;
+		a{
+			display: inline;
+			@include links{
+				color: $base-fontcolor-gray;
+			}
+			@include links-hover{
+				color: $base-fontcolor-gray;
+			}
+		}
+	}
+}
+
+
+

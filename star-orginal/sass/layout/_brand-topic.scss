@@ -1,0 +1,131 @@
+.topic{
+	@include module-subtitle(off,titleText);
+	@extend %container-gutter;
+	background: $base-bgcolor-lighten;
+
+	&-subtitle{
+		width: 100%;
+	}
+
+	&-posttime{
+		font-size: $base-fontsize-small;
+	}
+
+	&-author{
+		@extend %clearfix;
+		@extend %content-width;
+		margin-bottom: 1.5rem;
+
+		@include breakpoint($desktop-width){
+			max-width: $content-text-width;
+		}
+	}
+
+	&-author-headimg{
+		@include span(4);
+
+		img{
+			width: 45px;
+			@include border-radius(50%);
+		}
+
+		@include breakpoint($tablet-width){
+			@include span(2);
+		}
+	}
+
+	&-author-name, &-author-title{
+		@include span(20 last);
+		@include box-sizing(border-box);
+		padding-left:2%;
+		font-size: $base-fontsize-small;
+
+		@include breakpoint($tablet-width){
+			@include span(22 last);
+			padding-left:0;
+		}
+
+		@include breakpoint($desktop-width){
+			float: none;
+			@include inline-block;
+			margin: 10px 5px;
+			width: auto;
+			font-size: $base-fontsize-mid;
+		}
+	}
+
+	&-author-name{
+		color: $base-fontcolor-deepdark;
+	}
+
+	&-author-title{
+		color: $base-fontcolor-sec-highlight;
+	}
+
+	&-content{
+		@extend %content-width;
+
+		@include breakpoint($tablet-width){
+			max-width: $content-text-width;
+		}
+
+		p{
+			margin-bottom: 1rem;
+		}
+
+		> iframe{
+			margin-bottom: 1.5rem;
+		}
+
+		a{
+			color: $base-fontcolor-highlight;
+			border-bottom: $base-border-color-heightlight 1px solid;
+		}
+
+		a:hover{
+			border: none;
+		}
+
+	}
+
+	&-img{
+		margin: 1.5rem 0;
+
+		img{
+			width: 100%;
+		}
+	}
+}
+
+#youkuplayer{
+	margin-bottom: 30px;
+}
+
+
+.topic-recipes{
+	@include module-subtitle(on,none);
+	@include recipelist(3,radius);
+	@extend %container-gutter;
+	background: $base-bgcolor-darken;
+	text-align: center;
+
+	&-header{
+		@include breakpoint($tablet-width){
+			max-width: $content-text-width;
+		}
+	}
+
+	&-subtitle{
+		@extend %title-brand-topic-recipes;
+	}
+
+	&-totalnum{
+		@extend %module-subtitle-totalnum;
+	}
+
+	&-list{
+		@include breakpoint($tablet-width){
+			max-width: $content-text-width;
+		}
+	}
+}

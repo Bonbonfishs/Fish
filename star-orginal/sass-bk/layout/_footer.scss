@@ -1,0 +1,111 @@
+#footer{
+	position: relative;
+	padding: 50px 0 0 0;
+	@extend .bgcolor-white;
+	h5{
+		@extend %title-hide;
+	}
+
+	&[data-concise="on"]{
+		@extend .bgcolor-white;
+		.sitemap{
+			display: none;
+		}
+
+		.security-certification{
+			position: static;
+			margin: 0;
+			text-align: center;
+		}
+	}
+
+	@include concise(){
+		@extend .bgcolor-white;
+		.sitemap{
+			display: none;
+		}
+
+		.security-certification{
+			position: static;
+			margin: 0;
+			text-align: center;
+		}
+	}
+
+	@include simplify(){
+		@extend .bgcolor-white;
+		.sitemap{
+			display: none;
+		}
+
+		.security-certification{
+			position: static;
+			margin: 0;
+			text-align: center;
+		}
+	}
+}
+
+.sitemap{
+	@extend %common-container-width;
+	
+	@include with-layout($grid-sitemap){
+		.sitemap-list{
+			display: block;
+			padding: 0 0 0 80px;
+			margin: 0 auto;
+			@extend %clearfix;
+			>li{
+				@include span(1);
+
+				&:last-child{
+					@include last;
+				}
+
+				h6{
+					color: $base-titlecolor;
+					margin-bottom: 10px;
+				}
+
+				>dl{
+					display: block;
+					>dd{
+						display: block;
+						a{
+							display: block;
+							@include links(){
+								@extend .fontcolor-gray;
+							};
+
+							@include links-hover(){
+								@extend .fontcolor-deepgray;
+							};
+						}
+					}
+				}
+			}
+		}
+	}
+	
+}
+
+.copyright{
+	display: block;
+	padding: 2.5rem;
+	text-align: center;
+}
+
+.security-certification{
+	position: absolute;
+	bottom: 20px;
+	right: 50%;
+	margin: 0 -600px 0 0;
+	height:50px;
+	a{
+		@include inline-block;
+		height: 50px;
+		img{
+			height: 50px;
+		}
+	}
+}

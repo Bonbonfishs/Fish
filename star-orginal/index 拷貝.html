@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="cn">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+	<title>联系欣和 ｜ 欣和官网</title>
+	<script>
+
+/*
+		var perprice = 500;
+		var peoplenum;
+		var discountlevel1 = .8;
+		var discountlevel2 = 350;
+		var price;
+
+		
+
+		function countPrice(){
+			if(peoplenum >= 20){
+				price = ( perprice - discountlevel2 ) * peoplenum;
+
+
+			} else if(peoplenum <20 && peoplenum >=10){
+
+				price = perprice * discountlevel1 * peoplenum;
+
+			}else{
+
+				price = perprice * peoplenum;
+
+			}
+			document.write(price);
+		}
+		
+		peoplenum = 1;
+		countPrice();
+		peoplenum = 10;
+		countPrice();
+*/
+
+/*
+
+for(i=1; i<10; i++){
+	//document.write(i);
+	for(j=1; j<10; j++){
+		//document.write(i);
+		document.write(i + "x" + j + "=" + i*j + "</br>");
+	}
+
+	document.write("</br>");
+}*/
+
+	//var mailObject = {};
+
+	/*
+	var mail = "a@a.com,b@b.com,c@c.com,d@d.com";
+	var mailList = new Array();
+
+	mailList = mail.split(",");
+	
+	for( i = 0 ; i < mailList.length ; i++ ){
+		var msg = "";
+		msg = mailList[i];
+		console.log(msg);
+		document.write(msg + "<br/>");
+	}*/
+
+	/*
+
+	var nowTime = new Date();
+	var nextYear = new Date(2016,12,1);
+
+	var howManydayTo2017 = (nextYear.getTime() - nowTime.getTime()) / 1000 / 60 / 60 / 24 ;
+
+	howManydayTo2017 = parseInt(howManydayTo2017);
+
+	console.log(nowTime);
+	console.log(nextYear);
+
+	console.log(howManydayTo2017);*/
+	
+	/*
+	var str = prompt("請輸入一個 0-20 的正整數","看這裡!");
+
+	var discoverNum = 0; //出現次數
+	var randomNumBox = new Array();
+
+	if( str % 2 == 0 ){
+		document.write("輸入的數是雙數");
+	}else{
+		document.write("輸入的數是單數");
+	}
+
+
+	for(i = 0; i < 20; i++){
+		var num = parseInt(Math.round(Math.random() * 100 / 5));
+		randomNumBox[i] = num;
+		document.write("<br/>" + num);
+
+		if( str == num ){
+			discoverNum ++;
+		}
+	}
+
+	document.write("<br/>共出現了" + discoverNum + "次");
+
+	*/
+
+	/*
+
+	var randomNumBox = new Array();
+	var abcArray = [5,8,1,9,2,7,4,3,6];
+
+	for(i = 0; i < 20; i++){
+		var num = parseInt(Math.round(Math.random() * 100 / 5));
+		randomNumBox[i] = num;
+		//document.write(num + ",");
+
+	}
+
+	document.write(randomNumBox + "<br/>");
+	
+	var i=0;
+
+	while( i < randomNumBox.length ){
+
+		if(randomNumBox[i] > randomNumBox[i+1]){
+			var pauseRoom = randomNumBox[i+1];
+			randomNumBox[i+1] = randomNumBox[i];
+			randomNumBox[i] = pauseRoom;
+			i--;
+		}else{
+			i++;
+		}
+	}
+
+	document.write(randomNumBox);*/
+
+	var num1 = document.getElementById("num1").value;
+	var num2 = document.getElementById("num2").value;
+
+	function mathCount(){
+
+		if(isNaN(num1.value) == false || isNaN(num2.value) == false){
+			if(this.id = "num1"){
+				num1 = this.value;
+
+			}else if(this.id = "num2"){
+				num2 = this.value;
+			}
+			alert(num1 * num2);
+		}else{
+			alert("錯啦");
+		}
+			
+	}
+
+	</script>
+</head>
+<body>
+	<input id="num1" type="text" onchange="mathCount();">
+	<input id="num2" type="text" onchange="mathCount();">
+</body>
+</html>

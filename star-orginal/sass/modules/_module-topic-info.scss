@@ -1,0 +1,108 @@
+@mixin topic-info($list-line:off){
+	&-list, &-box{
+		@extend %container-width;
+		border: $base-border-color-lighten 1px solid;
+		background: $base-bgcolor-lighten;
+	}
+
+	&-item{
+		@extend %content-width;
+		
+		a{
+			display: block;
+			@extend %clearfix;
+			@include hover-transition(opacity);
+		}
+
+		a:hover{
+			@include hover-opacity;
+		}
+
+		@include breakpoint($desktop-width){
+			width: 90%;
+		}
+
+
+	}
+
+	@if $list-line == on{
+		&-list{
+			@include border-radius(0 0 6px 6px);
+			border-top: none;
+		}
+
+		&-item{
+			border-bottom: $base-border-color-lighten 1px solid;
+			padding: 8vw 0;
+
+			@include breakpoint($tablet-width){
+				padding: 40px 0;
+			}
+		}
+	}
+
+	@if $list-line == off{
+		&-list{
+			@include border-radius(6px);
+			padding: 5vw 0;
+
+			@include breakpoint($desktop-width){
+				padding: 40px 0;
+			}
+		}
+	}
+
+	&-item-content{
+		color: $base-content-fontcolor;
+		header{
+			margin-bottom: 0.5rem;
+			@extend %clearfix;
+		}
+
+		@include breakpoint($tablet-width){
+			@include span(15 last);
+			@include box-sizing(border-box);
+			padding-left: 2%;
+		}
+	}
+
+	&-item-img{
+		margin: 0 0 1rem 0;
+
+		img{
+			width: 100%;
+		}
+
+		@include breakpoint($tablet-width){
+			@include span(9);
+			margin: 0;
+		}
+	}
+
+	&-item-title{
+		@include span(16);
+		color: $base-fontcolor-highlight;
+
+		@include breakpoint($desktop-width){
+			font-size: $base-fontsize-large;
+			@include span(18);
+		}
+	}
+
+	&-item-dishnum{
+		@include span(8 last);
+		font-size: $base-fontsize-small;
+		color: $base-fontcolor-darken;
+		text-align: right;
+
+		b{
+			font-weight: bold;
+			padding: 0 3px;
+		}
+
+		@include breakpoint($desktop-width){
+			@include span(6 last);
+		}
+	}
+}
+

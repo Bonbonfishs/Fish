@@ -1,0 +1,10 @@
+.topics-recommend{
+	@include module-subtitle(off,none);
+	@extend %container-gutter;
+	@include topic-info(off);
+	background: $base-bgcolor-darken;
+
+	&-subtitle{
+		@extend %title-brand-topics-recommend;
+	}
+}

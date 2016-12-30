@@ -1,0 +1,127 @@
+// container width 94vw
+
+%container-width{
+	width: 94%;
+	width: 94vw;
+	margin: 0 auto;
+	@include box-sizing(border-box);
+	@include breakpoint($tablet-width){
+		width: 90%;
+	}
+
+	@include breakpoint($desktop-width){
+		width: $desktop-width;
+	}
+}
+
+%container-gutter{
+	padding: 8% 0;
+	padding: 8vw 0;
+	@include breakpoint($tablet-width){
+		padding: 50px 0;
+	}
+}
+
+
+// content width 84vw
+
+%content-width{
+	width: 84%;
+	width: 84vw;
+	margin: 0 auto;
+	@include box-sizing(border-box);
+	@include breakpoint($tablet-width){
+		width: 90%;
+
+	}
+
+	@include breakpoint($desktop-width){
+		width: $desktop-width;
+	}
+}
+
+// hover
+
+@mixin hover-opacity{
+	@include opacity(0.8);
+}
+
+@mixin hover-transition($part:all){
+	@include transition($part .3s ease-in-out);
+}
+
+// title img
+
+%title-brand-topics{ // 代表人物
+	background-image: url(../imgs/title/title-brand-topics.svg);
+}
+
+%title-brand-all-recipes{ // 所有菜譜
+	background-image: url(../imgs/title/title-brand-all-recipes.svg);
+}
+
+%title-brand-recipes-recommend{ // 推薦菜譜
+	background-image: url(../imgs/title/title-brand-recipes-recommend.svg);
+}
+
+%title-brand-topics-recommend{ // 推薦主題
+	background-image: url(../imgs/title/title-brand-topics-recommend.svg);
+}
+
+%title-brand-attitude{ // 飲食態度
+	background-image: url(../imgs/title/title-brand-attitude.svg);
+}
+
+%title-brand-recipes{ // 菜譜
+	background-image: url(../imgs/title/title-brand-recipes.svg);
+}
+
+%title-brand-topic-recipes{ // 主題菜譜
+	background-image: url(../imgs/title/title-brand-topic-recipes.svg);	
+}
+
+%title-brand-recipe-ingredient{ // 食材明細
+	background-image: url(../imgs/title/title-brand-recipe-ingredient.svg);
+	
+}
+
+%title-brand-recipe-direction{ // 作法步驟
+	background-image: url(../imgs/title/title-brand-recipe-direction.svg);
+}
+
+%title-brand-recipe-tip{ // 小貼士
+	background-image: url(../imgs/title/title-brand-recipe-tip.svg);
+}
+
+%title-brand-all-prods{ // 所有產品
+	background-image: url(../imgs/title/title-brand-all-prods.svg);
+}
+
+%title-brand-prods{ // 產品
+	background-image: url(../imgs/title/title-brand-prods.svg);
+}
+
+%title-brand-our-attitude{ // 我們的生活飲食態度
+	background-image: url(../imgs/title/title-brand-our-attitude.svg);
+}
+
+%title-brand-news{  // 品牌動態
+	background-image: url(../imgs/title/title-brand-news.svg);
+}
+
+%title-brand-group{ // 品牌家族
+	background-image: url(../imgs/title/title-brand-group.svg);
+}
+
+%title-brand-nutrition-fact{ // 產品參數
+	background-image: url(../imgs/title/title-brand-nutrition-fact.svg);
+}
+
+%title-brand-series-prods{ // 系列產品
+	background-image: url(../imgs/title/title-brand-series-prods.svg);
+}
+
+
+
+
+

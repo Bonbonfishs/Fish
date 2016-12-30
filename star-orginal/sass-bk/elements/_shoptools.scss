@@ -1,0 +1,108 @@
+.shop-tool{
+	position: absolute;
+	width: 430px;
+	top: 4px;
+	right: 10px;
+
+	@include concise(){
+		display: none;
+	}
+
+	@include simplify(){
+		display: none;
+	}
+}
+
+.shop-tool-list{
+	display: block;
+	text-align: right;
+}
+
+.shop-tool-item{
+	position: relative;
+	@include inline-block;
+	>a{
+		@include inline-block;
+		padding: 12px 7px;
+		position: relative;
+		text-align: center;
+
+		.shop-tool-icon{
+			@include inline-block;
+			width: 35px;
+			position: relative;
+		}
+
+		i{
+			@include animate(all,0.3s,ease);
+			@include transform(scale(1));
+		}
+
+		@include links{
+			@extend .fontcolor-black;
+		}
+
+		@include links-hover{
+			@extend .fontcolor-gray;
+			i{
+				@include transform(scale(1.05));
+			}
+		}
+
+		.shop-tool-name{
+			@include inline-block;
+			text-align: left;
+			@extend .font-size-13;
+			@extend .line-height-24;
+		}
+	}
+
+	@include scrolling(){
+		>a{
+			@include inline-block;
+		}
+		.shop-tool-icon{
+			@include inline-block;
+			width: 35px;
+		}
+	}
+
+	@include concise(){
+		>a{
+			@include inline-block;
+		}
+		.shop-tool-icon{
+			@include inline-block;
+			width: 35px;
+		}
+	}
+}
+
+.shop-tool-tag{
+	position: relative;
+	top: -2px;
+	@include inline-block;
+	min-width: 16px;
+	margin-left: 5px;
+	padding: 0 5px 0 5px;
+	text-align: center;
+	@extend .bgcolor-highlight;
+	@extend .font-size-12;
+	@extend .line-height-16;
+	@extend .fontcolor-white;
+	@extend .border-radius-md;
+	@extend .text-transform-uppercase;
+	@include transform(scale(0.9));
+
+	.btn-history &{
+		padding: 2px 5px 0 5px;
+		@include transform(scale(0.83));
+	}
+}
+
+.btn-history, .btn-cart, .btn-wishlist, .btn-bonus{
+	display: block;
+	i{
+		@include sprite-setting(35px);
+	}	
+}

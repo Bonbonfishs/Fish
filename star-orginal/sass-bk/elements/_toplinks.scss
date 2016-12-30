@@ -1,0 +1,34 @@
+.toplinks{
+	@include span(12 last);
+	text-align: right;
+	>li{
+		position: relative;
+		@include inline-block;
+		padding: 0 8px;
+
+		>a{
+			@include inline-block;
+			vertical-align: top;
+			@include links-hover{
+				@extend .text-decoration-underline;
+			}
+		}
+
+		&:before{
+			position: absolute;
+			right: -2px;
+			top: 7px;
+			@include add-content(1px,10px);
+			background: darken($border-color, 12);
+		}
+
+		&:last-child:before{
+			display: none;
+		}
+	}
+}
+
+.has-login{
+	max-width: 380px;
+	@extend %text-overflow;
+}

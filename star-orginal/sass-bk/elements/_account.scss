@@ -1,0 +1,256 @@
+.accounts{
+	width: 400px;
+	margin: 0 auto;
+	text-align: center;
+}
+
+.accounts-title{
+	height: 0;
+	overflow: hidden;
+}
+
+.account-mail-login-btn{
+	display: block;
+	width: 80%;
+	@extend .link-style-ul-red;
+	@extend .padding-md;
+	@extend .border-radius-xs;
+	@extend .font-size-15;
+	@extend .line-height-24;
+	margin: 0 auto 20px auto;
+	i{
+		padding: 0 10px 0 0;
+	}
+}
+
+.account-facebook-login-btn{
+	display: block;
+	width: 80%;
+	@extend .padding-md;
+	@extend .border-radius-xs;
+	@extend .font-size-15;
+	@extend .line-height-30;
+	@extend .border-1;
+	@extend .border-style-solid;
+	@extend .fontcolor-white;
+	background: #3a5795;
+	border-color: #133783;
+	margin: 0 auto 20px auto;
+}
+
+.account-sec-title{
+	display: block;
+	text-align: center;
+	padding: 0 0 40px 0;
+	@extend .font-size-15;
+	@extend .line-height-24;
+	@extend .font-weight-normal;
+	@extend .border-bottom-1;
+	@extend .border-style-solid;
+	@extend .border-color;
+	@extend .fontcolor-black;
+	margin: 0 auto 50px auto;
+	i{
+		padding: 0 10px 0 0;
+	}
+}
+
+.separator{
+	display: block;
+	@extend .border-bottom-1;
+	@extend .border-color;
+	@extend .border-style-solid;
+	margin: 0 0 35px 0;
+	em{
+		@include inline-block;
+		position: relative;
+		top: 13px;
+		padding: 0 10px;
+		@extend .bgcolor-white;
+		@extend .font-style-normal;
+	}
+}
+
+.text-danger{
+	display: block;
+	@extend .fontcolor-highlight;
+}
+
+.account-form{
+	width: 80%;
+	margin: 0 auto;
+	margin-bottom: 20px;
+
+	.form-group{
+		position: relative;
+	}
+
+	.form-control{
+		width: 100%;
+	}
+
+	.accounts-column{
+		width: 100%;
+	}
+
+	.text-danger{
+		display: none;
+		min-width: 170px;
+		text-align: left;
+		position: absolute;
+		top: 50%;
+		left: 100%;
+		margin: -15px 0 0 10px;
+		@extend .padding-sm;
+		@extend .border-radius-xs;
+		@extend .bgcolor-deepgray;
+		background: darken($base-bgcolor-deepgray,5);
+		@extend .fontcolor-white;
+		i{
+			padding: 0 5px;
+		}
+
+		&:before{
+			@include add-content(0,0);
+			left: -8px;
+			top: 50%;
+			margin: -4px 0 0 0;
+			border: darken($base-bgcolor-deepgray,5) 4px solid;
+			border-color: transparent darken($base-bgcolor-deepgray,5) transparent transparent;
+		}
+	}
+}
+
+.form-input, .form-input-rd-md, .form-input-rd-up, .form-input-rd-bm{
+	@extend .border-style-solid;
+	@extend .input-border-color;
+	@extend .padding-xl;
+}
+
+.form-input{
+	@extend .border-1;
+	@extend .border-radius-sm;
+}
+
+.form-input-rd-md{
+	border-width: 0 1px 1px 1px;
+}
+
+.form-input-rd-up{
+	@extend .border-1;
+	@include border-radius(5px 5px 0 0);
+}
+
+.form-input-rd-bm{
+	border-width: 0 1px 1px 1px;
+	@include border-radius(0 0 5px 5px);
+}
+
+
+.has-error .text-danger{
+	display: block;
+}
+
+.accounts-column-left, .accounts-column-right{
+	width: 49%;
+	padding: 8px 0;
+	@include inline-block;
+	label{
+		padding: 0 8px;
+	}
+}
+
+.accounts-column-left{
+	text-align: left;
+}
+
+.accounts-column-right{
+	text-align: right;
+}
+
+.accounts-column{
+	width: 80%;
+	margin: 0 auto;
+	padding: 8px 0;
+	label{
+		padding: 0 8px;
+	}
+	a{
+		@include links{
+			@extend .link-style-ul-red;
+		} 
+	}
+}
+
+.account-form-recaptcha{
+	padding: 20px 0;
+	span{
+		@extend .fontcolor-black;
+	}
+}
+
+.forget-password-btn{
+	@extend .link-underline;
+}
+
+.submit-btn{
+	width: 100%;
+	@extend .link-style-wr;
+	@extend .padding-md;
+	@extend .border-radius-xs;
+	@extend .font-size-15;
+	@extend .line-height-30;
+}
+
+.other-account-link{
+	padding: 30px 0 0 0;
+	text-align: center;
+	a{
+		@include links{
+			@extend .link-style-ul-red;
+		} 	
+	}
+}
+
+.activate-account-id{
+	padding: 0 6px 12px 3px;
+	margin: 0 0 10px 70px;
+	text-align: left;
+}
+
+.activate-account-password{
+	margin: 0 0 35px 70px;
+	em{
+		top: 8px;
+	}
+
+	input{
+		@extend .border-style-solid;
+		@extend .input-border-color;
+		@extend .padding-xl;
+		@extend .border-1;
+		@extend .border-radius-sm;
+	}
+}
+
+.activate-account-password, .activate-account-id{
+	position: relative;
+	em{
+		position: absolute;
+		width: 70px;
+		left: -70px;
+		display: block;
+		text-align: left;
+		@extend .font-style-normal;
+	}
+}
+
+.accounts-wording{
+	width: 80%;
+	margin: 0 auto;
+	margin-bottom: 50px;
+	text-align: left;
+	& ~ .submit-btn{
+		width: 80%;
+	}
+}
